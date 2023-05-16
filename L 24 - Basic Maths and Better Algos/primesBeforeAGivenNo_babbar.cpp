@@ -7,7 +7,7 @@ int main() {
     // ques - given a num - n , print how many prime numbers exist before it ? 
     
 
-    //PRIME NUMBER BETTER CODE - Sieve of Eratosthenes
+    // PRIME NUMBER BETTER CODE - Sieve of Eratosthenes
     // explanation - we create an array[n+1] and make all the elements prime
     //  ( means we are assuming all the elements to be prime in the begining)
     // then we'll start from arr_given[i] and then check if its prime or not
