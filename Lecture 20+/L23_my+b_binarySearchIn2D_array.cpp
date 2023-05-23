@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    // rotating an array by 90 degrees - just printing 
+    // Binary  
     
     int r = 5;
     int c = 5;
@@ -21,12 +21,14 @@ int main()
     int m = (s + e)/2;
         
     while ( s < e ){
-        int s_row = s/c;
-        int s_col = s%c;
-        int e_row = e/c;
-        int e_col = e%c;
+        // int s_row = s/c;
+        // int s_col = s%c;
+        // int e_row = e/c;
+        // int e_col = e%c;
+
         int m_row = m/c;
         int m_col = m%c;
+
         // cout<<"e = "<<e<<endl;
         // cout<<"end = "<<e_row<<","<<e_col<<endl;
         // cout<<"s = "<<s<<endl;
@@ -40,11 +42,21 @@ int main()
         }
         if ( matrix[m_row][m_col] > target ) {
             e = m - 1 ;
-            m = (s + e)/2;
+            if( (s + e)%2 == 1 ) {
+                m = (s + e)/2 + 1;
+            }
+            else {
+                m = (s + e)/2;
+            }
         }
         if ( matrix[m_row][m_col] < target ) {
             s = m + 1;
-            m = (s + e)/2;
+            if( (s + e)%2 == 1 ) {
+                m = (s + e)/2 + 1;
+            }
+            else {
+                m = (s + e)/2;
+            }
         }
     }
     cout<<"not found "<<endl;
