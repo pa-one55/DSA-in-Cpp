@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int fibUsingRecursion(int n){
+    
+    if(n == 0 ){
+        return 0;
+    }
+    
+    if (n == 1 ){
+        return 1;
+    }
+    
+    int lol = fibUsingRecursion(n - 2);
+    int pol = fibUsingRecursion(n - 1);
+    int ans = lol + pol;
+    return ans;
+}
+
+
+int main()
+{
+    // cout<<"Hello World";
+    
+    
+    int n = 7;
+
+    int anss = fibUsingRecursion(n);
+    cout<<"anss = "<<anss<<endl;
+
+
+    return 0;
+}
